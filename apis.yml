@@ -1,0 +1,75 @@
+aid: breathe-hr
+name: Breathe HR
+description: >-
+  Breathe is a UK-headquartered cloud HRIS designed for small and
+  midsize businesses, covering employee records, holiday and sickness
+  tracking, performance, documents, expenses, and rota scheduling.
+  The Breathe API is a REST/JSON service that exposes employee,
+  absence, account, and related HR resources for integration with
+  payroll, identity, and analytics tools. Authentication uses a
+  per-account API key passed in the X-API-KEY header against a
+  production base URL of https://api.breathehr.com/v1 with a sandbox
+  available at https://api.sandbox.breathehr.com/v1.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - HR
+  - HRIS
+  - Human Resources
+  - Employee Management
+  - Absence Management
+  - Holiday Tracking
+  - SMB
+  - UK
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/breathe-hr/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: breathe-hr:rest-api
+    name: Breathe HR REST API
+    description: >-
+      JSON REST API for managing employees, absences, holidays, sick
+      leaves, accounts, and related HR records inside Breathe. Calls
+      require an X-API-KEY header containing the account-level token
+      generated from the Breathe admin under Configure > API Settings.
+    humanURL: https://developer.breathehr.com/
+    baseURL: https://api.breathehr.com/v1
+    tags:
+      - HR
+      - Employees
+      - Absences
+      - Holidays
+      - Accounts
+    properties:
+      - type: Documentation
+        url: https://developer.breathehr.com/
+      - type: Getting Started
+        url: https://developer.breathehr.com/documentation/getting_started
+      - type: Authentication
+        url: https://developer.breathehr.com/documentation/authenticating
+      - type: Sandbox Base URL
+        url: https://api.sandbox.breathehr.com/v1
+
+common:
+  - type: Website
+    url: https://www.breathehr.com
+  - type: Developer Portal
+    url: https://developer.breathehr.com
+  - type: Documentation
+    url: https://developer.breathehr.com/
+  - type: Pricing
+    url: https://www.breathehr.com/en-gb/pricing
+  - type: Sign Up
+    url: https://www.breathehr.com/en-gb/free-trial
+  - type: Knowledge Base
+    url: https://intercom.help/breathehr/en
+  - type: Support
+    url: mailto:support@breathehr.com
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/breathehr
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
