@@ -1,0 +1,319 @@
+openapi: 3.1.0
+info:
+  title: Breathe HR REST API
+  description: >-
+    Breathe HR is a UK SMB HRIS. The REST API exposes employees, absences,
+    holidays, sicknesses, and account resources as JSON over HTTP. Requests
+    authenticate with an X-API-KEY header containing the per-account token
+    generated under Configure > API Settings.
+  version: v1
+  contact:
+    name: Breathe HR Developer
+    url: https://developer.breathehr.com/
+servers:
+  - url: https://api.breathehr.com/v1
+    description: Production
+  - url: https://api.sandbox.breathehr.com/v1
+    description: Sandbox
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Account
+  - name: Employees
+  - name: Absences
+  - name: Holidays
+  - name: Sicknesses
+paths:
+  /accounts:
+    get:
+      summary: List accounts
+      operationId: listAccounts
+      tags: [Account]
+      responses:
+        "200":
+          description: Accounts
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Account" }
+  /employees:
+    get:
+      summary: List employees
+      operationId: listEmployees
+      tags: [Employees]
+      parameters:
+        - { name: page, in: query, schema: { type: integer, default: 1 } }
+        - { name: per_page, in: query, schema: { type: integer, default: 50 } }
+      responses:
+        "200":
+          description: Employees
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Employee" }
+    post:
+      summary: Create an employee
+      operationId: createEmployee
+      tags: [Employees]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EmployeeInput" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Employee" }
+  /employees/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer } }
+    get:
+      summary: Get an employee
+      operationId: getEmployee
+      tags: [Employees]
+      responses:
+        "200":
+          description: Employee
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Employee" }
+    put:
+      summary: Update an employee
+      operationId: updateEmployee
+      tags: [Employees]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EmployeeInput" }
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Employee" }
+    delete:
+      summary: Delete an employee
+      operationId: deleteEmployee
+      tags: [Employees]
+      responses:
+        "204": { description: Deleted }
+  /absences:
+    get:
+      summary: List absences
+      operationId: listAbsences
+      tags: [Absences]
+      parameters:
+        - { name: page, in: query, schema: { type: integer, default: 1 } }
+        - { name: per_page, in: query, schema: { type: integer, default: 50 } }
+        - { name: employee_id, in: query, schema: { type: integer } }
+      responses:
+        "200":
+          description: Absences
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Absence" }
+  /absences/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer } }
+    get:
+      summary: Get an absence
+      operationId: getAbsence
+      tags: [Absences]
+      responses:
+        "200":
+          description: Absence
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Absence" }
+  /holidays:
+    get:
+      summary: List holiday requests
+      operationId: listHolidays
+      tags: [Holidays]
+      parameters:
+        - { name: page, in: query, schema: { type: integer, default: 1 } }
+        - { name: per_page, in: query, schema: { type: integer, default: 50 } }
+        - { name: employee_id, in: query, schema: { type: integer } }
+      responses:
+        "200":
+          description: Holidays
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Holiday" }
+    post:
+      summary: Create a holiday request
+      operationId: createHoliday
+      tags: [Holidays]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/HolidayInput" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Holiday" }
+  /holidays/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer } }
+    get:
+      summary: Get a holiday request
+      operationId: getHoliday
+      tags: [Holidays]
+      responses:
+        "200":
+          description: Holiday
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Holiday" }
+    put:
+      summary: Update a holiday request
+      operationId: updateHoliday
+      tags: [Holidays]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/HolidayInput" }
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Holiday" }
+  /sicknesses:
+    get:
+      summary: List sickness records
+      operationId: listSicknesses
+      tags: [Sicknesses]
+      parameters:
+        - { name: page, in: query, schema: { type: integer, default: 1 } }
+        - { name: per_page, in: query, schema: { type: integer, default: 50 } }
+        - { name: employee_id, in: query, schema: { type: integer } }
+      responses:
+        "200":
+          description: Sickness records
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Sickness" }
+    post:
+      summary: Create a sickness record
+      operationId: createSickness
+      tags: [Sicknesses]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/SicknessInput" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Sickness" }
+  /sicknesses/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: integer } }
+    get:
+      summary: Get a sickness record
+      operationId: getSickness
+      tags: [Sicknesses]
+      responses:
+        "200":
+          description: Sickness
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Sickness" }
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+  schemas:
+    Account:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        plan: { type: string }
+    Employee:
+      type: object
+      properties:
+        id: { type: integer }
+        first_name: { type: string }
+        last_name: { type: string }
+        email: { type: string, format: email }
+        job_title: { type: string }
+        department: { type: string }
+        start_date: { type: string, format: date }
+        date_of_birth: { type: string, format: date }
+        status: { type: string }
+    EmployeeInput:
+      type: object
+      required: [first_name, last_name]
+      properties:
+        first_name: { type: string }
+        last_name: { type: string }
+        email: { type: string, format: email }
+        job_title: { type: string }
+        department: { type: string }
+        start_date: { type: string, format: date }
+    Absence:
+      type: object
+      properties:
+        id: { type: integer }
+        employee_id: { type: integer }
+        kind: { type: string, enum: [holiday, sickness, other] }
+        start_date: { type: string, format: date }
+        end_date: { type: string, format: date }
+        status: { type: string }
+    Holiday:
+      type: object
+      properties:
+        id: { type: integer }
+        employee_id: { type: integer }
+        start_date: { type: string, format: date }
+        end_date: { type: string, format: date }
+        half_start: { type: boolean }
+        half_end: { type: boolean }
+        status: { type: string, enum: [pending, authorised, declined, cancelled] }
+        days: { type: number }
+    HolidayInput:
+      type: object
+      required: [employee_id, start_date, end_date]
+      properties:
+        employee_id: { type: integer }
+        start_date: { type: string, format: date }
+        end_date: { type: string, format: date }
+        half_start: { type: boolean }
+        half_end: { type: boolean }
+    Sickness:
+      type: object
+      properties:
+        id: { type: integer }
+        employee_id: { type: integer }
+        start_date: { type: string, format: date }
+        end_date: { type: string, format: date }
+        reason: { type: string }
+    SicknessInput:
+      type: object
+      required: [employee_id, start_date]
+      properties:
+        employee_id: { type: integer }
+        start_date: { type: string, format: date }
+        end_date: { type: string, format: date }
+        reason: { type: string }
