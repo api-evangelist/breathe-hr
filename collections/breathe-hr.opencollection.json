@@ -1,0 +1,355 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Breathe HR REST API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/accounts"
+          },
+          "docs": "List accounts"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Employees",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/employees",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List employees"
+        },
+        {
+          "info": {
+            "name": "Create an employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.breathehr.com/v1/employees",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an employee"
+        },
+        {
+          "info": {
+            "name": "Get an employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an employee"
+        },
+        {
+          "info": {
+            "name": "Update an employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.breathehr.com/v1/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an employee"
+        },
+        {
+          "info": {
+            "name": "Delete an employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.breathehr.com/v1/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an employee"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Absences",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List absences",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/absences",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "employee_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List absences"
+        },
+        {
+          "info": {
+            "name": "Get an absence",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/absences/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an absence"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Holidays",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List holiday requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/holidays",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "employee_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List holiday requests"
+        },
+        {
+          "info": {
+            "name": "Create a holiday request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.breathehr.com/v1/holidays",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a holiday request"
+        },
+        {
+          "info": {
+            "name": "Get a holiday request",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/holidays/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a holiday request"
+        },
+        {
+          "info": {
+            "name": "Update a holiday request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.breathehr.com/v1/holidays/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a holiday request"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sicknesses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sickness records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/sicknesses",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "employee_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List sickness records"
+        },
+        {
+          "info": {
+            "name": "Create a sickness record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.breathehr.com/v1/sicknesses",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a sickness record"
+        },
+        {
+          "info": {
+            "name": "Get a sickness record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/sicknesses/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a sickness record"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
