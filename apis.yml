@@ -11,7 +11,7 @@ description: >-
   production base URL of https://api.breathehr.com/v1 with a sandbox
   available at https://api.sandbox.breathehr.com/v1.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - HR
   - HRIS
