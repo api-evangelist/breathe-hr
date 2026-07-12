@@ -53,6 +53,10 @@ apis:
         url: https://api.sandbox.breathehr.com/v1
 
 common:
+  - type: DomainSecurity
+    url: security/breathe-hr-domain-security.yml
+  - type: Authentication
+    url: authentication/breathe-hr-authentication.yml
   - type: Website
     url: https://www.breathehr.com
   - type: DeveloperPortal
