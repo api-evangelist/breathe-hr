@@ -53,6 +53,8 @@ apis:
         url: https://api.sandbox.breathehr.com/v1
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/breathe-hr-agentic-access.yml
   - type: DomainSecurity
     url: security/breathe-hr-domain-security.yml
   - type: Authentication
