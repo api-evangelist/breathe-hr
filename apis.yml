@@ -11,7 +11,19 @@ description: >-
   production base URL of https://api.breathehr.com/v1 with a sandbox
   available at https://api.sandbox.breathehr.com/v1.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/breathe-hr.png
 tags:
   - HR
   - HRIS
@@ -27,31 +39,79 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: breathe-hr:rest-api
-    name: Breathe HR REST API
-    description: >-
-      JSON REST API for managing employees, absences, holidays, sick
-      leaves, accounts, and related HR records inside Breathe. Calls
-      require an X-API-KEY header containing the account-level token
-      generated from the Breathe admin under Configure > API Settings.
-    humanURL: https://developer.breathehr.com/
-    baseURL: https://api.breathehr.com/v1
-    tags:
-      - HR
-      - Employees
-      - Absences
-      - Holidays
-      - Accounts
-    properties:
-      - type: Documentation
-        url: https://developer.breathehr.com/
-      - type: GettingStarted
-        url: https://developer.breathehr.com/documentation/getting_started
-      - type: Authentication
-        url: https://developer.breathehr.com/documentation/authenticating
-      - type: Sandbox Base URL
-        url: https://api.sandbox.breathehr.com/v1
-
+- aid: breathe-hr:rest-api
+  name: Breathe HR REST API
+  description: >-
+    JSON REST API for managing employees, absences, holidays, sick leaves, accounts, and related HR records
+    inside Breathe. Calls require an X-API-KEY header containing the account-level token generated from
+    the Breathe admin under Configure > API Settings.
+  humanURL: https://developer.breathehr.com/
+  baseURL: https://api.breathehr.com/v1
+  tags:
+  - HR
+  - Employees
+  - Absences
+  - Holidays
+  - Accounts
+  properties:
+  - type: Documentation
+    url: https://developer.breathehr.com/
+  - type: GettingStarted
+    url: https://developer.breathehr.com/documentation/getting_started
+  - type: Authentication
+    url: https://developer.breathehr.com/documentation/authenticating
+  - type: Sandbox Base URL
+    url: https://api.sandbox.breathehr.com/v1
+- aid: breathe-hr:breathe-hr-absences-api
+  name: Breathe HR Absences API
+  description: The Absences API from Breathe HR — 2 operation(s) for absences.
+  humanURL: https://developer.breathehr.com/
+  baseURL: https://api.breathehr.com/v1
+  tags:
+  - Absences
+  properties:
+  - type: OpenAPI
+    url: openapi/breathe-hr-absences-api-openapi.yml
+- aid: breathe-hr:breathe-hr-account-api
+  name: Breathe HR Account API
+  description: The Account API from Breathe HR — 1 operation(s) for account.
+  humanURL: https://developer.breathehr.com/
+  baseURL: https://api.breathehr.com/v1
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/breathe-hr-account-api-openapi.yml
+- aid: breathe-hr:breathe-hr-employees-api
+  name: Breathe HR Employees API
+  description: The Employees API from Breathe HR — 2 operation(s) for employees.
+  humanURL: https://developer.breathehr.com/
+  baseURL: https://api.breathehr.com/v1
+  tags:
+  - Employees
+  properties:
+  - type: OpenAPI
+    url: openapi/breathe-hr-employees-api-openapi.yml
+- aid: breathe-hr:breathe-hr-holidays-api
+  name: Breathe HR Holidays API
+  description: The Holidays API from Breathe HR — 2 operation(s) for holidays.
+  humanURL: https://developer.breathehr.com/
+  baseURL: https://api.breathehr.com/v1
+  tags:
+  - Holidays
+  properties:
+  - type: OpenAPI
+    url: openapi/breathe-hr-holidays-api-openapi.yml
+- aid: breathe-hr:breathe-hr-sicknesses-api
+  name: Breathe HR Sicknesses API
+  description: The Sicknesses API from Breathe HR — 2 operation(s) for sicknesses.
+  humanURL: https://developer.breathehr.com/
+  baseURL: https://api.breathehr.com/v1
+  tags:
+  - Sicknesses
+  properties:
+  - type: OpenAPI
+    url: openapi/breathe-hr-sicknesses-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/breathe-hr-agentic-access.yml
