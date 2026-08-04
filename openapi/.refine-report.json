@@ -1,0 +1,22 @@
+{
+  "provider": "breathe-hr",
+  "sources": [
+    "breathe-hr-absences-api-openapi.yml",
+    "breathe-hr-account-api-openapi.yml",
+    "breathe-hr-employees-api-openapi.yml",
+    "breathe-hr-holidays-api-openapi.yml",
+    "breathe-hr-sicknesses-api-openapi.yml"
+  ],
+  "outputs": [
+    "breathe-hr-absences-api-openapi.yml",
+    "breathe-hr-account-api-openapi.yml",
+    "breathe-hr-employees-api-openapi.yml",
+    "breathe-hr-holidays-api-openapi.yml",
+    "breathe-hr-sicknesses-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
