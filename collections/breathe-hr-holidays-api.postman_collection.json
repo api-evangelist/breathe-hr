@@ -1,0 +1,456 @@
+{
+  "item": [
+    {
+      "id": "16f45c0e-96ca-4816-9db9-1334b80ffe5b",
+      "name": "Holidays",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2b3eef9f-edf9-4830-8348-026748bc81ef",
+          "name": "List holiday requests",
+          "request": {
+            "name": "List holiday requests",
+            "description": {},
+            "url": {
+              "path": [
+                "holidays"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "50"
+                },
+                {
+                  "disabled": false,
+                  "key": "employee_id",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c72359a-15e2-41f0-9a33-24a0fa430e1b",
+              "name": "Holidays",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "holidays"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "50"
+                    },
+                    {
+                      "key": "employee_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 8296,\n    \"employee_id\": 1077,\n    \"start_date\": \"1967-12-02\",\n    \"end_date\": \"1975-02-12\",\n    \"half_start\": false,\n    \"half_end\": true,\n    \"status\": \"authorised\",\n    \"days\": 1236.446666680363\n  },\n  {\n    \"id\": 8714,\n    \"employee_id\": 1718,\n    \"start_date\": \"1983-07-02\",\n    \"end_date\": \"1953-02-02\",\n    \"half_start\": true,\n    \"half_end\": true,\n    \"status\": \"authorised\",\n    \"days\": 4001.496212269784\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "64c68548-33b4-49f0-9985-dccfd9eda840",
+          "name": "Create a holiday request",
+          "request": {
+            "name": "Create a holiday request",
+            "description": {},
+            "url": {
+              "path": [
+                "holidays"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employee_id\": \"<integer>\",\n  \"start_date\": \"<date>\",\n  \"end_date\": \"<date>\",\n  \"half_start\": \"<boolean>\",\n  \"half_end\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d5d4db40-aa67-4eed-b9dd-751d9b8b5b67",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "holidays"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"employee_id\": \"<integer>\",\n  \"start_date\": \"<date>\",\n  \"end_date\": \"<date>\",\n  \"half_start\": \"<boolean>\",\n  \"half_end\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2005,\n  \"employee_id\": 9936,\n  \"start_date\": \"2010-04-02\",\n  \"end_date\": \"2002-08-04\",\n  \"half_start\": false,\n  \"half_end\": false,\n  \"status\": \"declined\",\n  \"days\": 7319.163418922885\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2f0a24b6-fbcf-420b-983d-74adb332cd7d",
+          "name": "Get a holiday request",
+          "request": {
+            "name": "Get a holiday request",
+            "description": {},
+            "url": {
+              "path": [
+                "holidays",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ae2f39f-38f4-498d-8d10-7bd038636b5a",
+              "name": "Holiday",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "holidays",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2005,\n  \"employee_id\": 9936,\n  \"start_date\": \"2010-04-02\",\n  \"end_date\": \"2002-08-04\",\n  \"half_start\": false,\n  \"half_end\": false,\n  \"status\": \"declined\",\n  \"days\": 7319.163418922885\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0943bb95-48f5-4a18-b48c-1dc537de51b1",
+          "name": "Update a holiday request",
+          "request": {
+            "name": "Update a holiday request",
+            "description": {},
+            "url": {
+              "path": [
+                "holidays",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employee_id\": \"<integer>\",\n  \"start_date\": \"<date>\",\n  \"end_date\": \"<date>\",\n  \"half_start\": \"<boolean>\",\n  \"half_end\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "676bdc1c-ff06-46b4-a574-f0dca1849502",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "holidays",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"employee_id\": \"<integer>\",\n  \"start_date\": \"<date>\",\n  \"end_date\": \"<date>\",\n  \"half_start\": \"<boolean>\",\n  \"half_end\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2005,\n  \"employee_id\": 9936,\n  \"start_date\": \"2010-04-02\",\n  \"end_date\": \"2002-08-04\",\n  \"half_start\": false,\n  \"half_end\": false,\n  \"status\": \"declined\",\n  \"days\": 7319.163418922885\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.breathehr.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "be61065b-b211-4c15-b848-26eaae9c8791",
+    "name": "Breathe HR REST Absences Holidays API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Breathe HR is a UK SMB HRIS. The REST API exposes employees, absences, holidays, sicknesses, and account resources as JSON over HTTP. Requests authenticate with an X-API-KEY header containing the per-account token generated under Configure > API Settings.\n\nContact Support:\n Name: Breathe HR Developer",
+      "type": "text/plain"
+    }
+  }
+}

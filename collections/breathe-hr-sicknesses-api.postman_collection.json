@@ -1,0 +1,342 @@
+{
+  "item": [
+    {
+      "id": "5f9c6418-c18a-4119-9919-ba3608d9f89a",
+      "name": "Sicknesses",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ace2ff5e-437f-42ae-8634-f137023c75a9",
+          "name": "List sickness records",
+          "request": {
+            "name": "List sickness records",
+            "description": {},
+            "url": {
+              "path": [
+                "sicknesses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "50"
+                },
+                {
+                  "disabled": false,
+                  "key": "employee_id",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "abc99d14-40b3-4a16-bb95-bcd62ea3a747",
+              "name": "Sickness records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sicknesses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "50"
+                    },
+                    {
+                      "key": "employee_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 9689,\n    \"employee_id\": 7783,\n    \"start_date\": \"2007-12-02\",\n    \"end_date\": \"2004-05-16\",\n    \"reason\": \"string\"\n  },\n  {\n    \"id\": 2011,\n    \"employee_id\": 6579,\n    \"start_date\": \"1993-05-21\",\n    \"end_date\": \"1986-01-27\",\n    \"reason\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f9cc01cf-b0a8-480b-ba2d-d12a6b5009da",
+          "name": "Create a sickness record",
+          "request": {
+            "name": "Create a sickness record",
+            "description": {},
+            "url": {
+              "path": [
+                "sicknesses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employee_id\": \"<integer>\",\n  \"start_date\": \"<date>\",\n  \"end_date\": \"<date>\",\n  \"reason\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "46d92273-0b99-4b08-9282-cd27e6892714",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sicknesses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"employee_id\": \"<integer>\",\n  \"start_date\": \"<date>\",\n  \"end_date\": \"<date>\",\n  \"reason\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 3795,\n  \"employee_id\": 4310,\n  \"start_date\": \"1959-02-06\",\n  \"end_date\": \"1984-09-24\",\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d91fad0e-112c-4510-8d85-ad72c8f7201b",
+          "name": "Get a sickness record",
+          "request": {
+            "name": "Get a sickness record",
+            "description": {},
+            "url": {
+              "path": [
+                "sicknesses",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "df2361c5-41f3-4926-90e0-51ba70f1a2a1",
+              "name": "Sickness",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sicknesses",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 3795,\n  \"employee_id\": 4310,\n  \"start_date\": \"1959-02-06\",\n  \"end_date\": \"1984-09-24\",\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.breathehr.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "bd9a07dc-b007-4399-9dce-b408336b46e9",
+    "name": "Breathe HR REST Absences Sicknesses API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Breathe HR is a UK SMB HRIS. The REST API exposes employees, absences, holidays, sicknesses, and account resources as JSON over HTTP. Requests authenticate with an X-API-KEY header containing the per-account token generated under Configure > API Settings.\n\nContact Support:\n Name: Breathe HR Developer",
+      "type": "text/plain"
+    }
+  }
+}

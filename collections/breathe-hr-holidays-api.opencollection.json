@@ -1,0 +1,109 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Breathe HR REST Absences Holidays API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Holidays",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List holiday requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/holidays",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "employee_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List holiday requests"
+        },
+        {
+          "info": {
+            "name": "Create a holiday request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.breathehr.com/v1/holidays",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a holiday request"
+        },
+        {
+          "info": {
+            "name": "Get a holiday request",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/holidays/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a holiday request"
+        },
+        {
+          "info": {
+            "name": "Update a holiday request",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.breathehr.com/v1/holidays/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a holiday request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

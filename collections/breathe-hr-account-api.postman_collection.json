@@ -1,0 +1,124 @@
+{
+  "item": [
+    {
+      "id": "44b603c1-ee64-4f69-9114-1664062bc884",
+      "name": "Account",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fc02c1b0-6249-44be-b35d-27fe53ec5fad",
+          "name": "List accounts",
+          "request": {
+            "name": "List accounts",
+            "description": {},
+            "url": {
+              "path": [
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d649fc0b-c256-4c4f-bbdf-c6b6b89a2d4b",
+              "name": "Accounts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 4483,\n    \"name\": \"string\",\n    \"plan\": \"string\"\n  },\n  {\n    \"id\": 2165,\n    \"name\": \"string\",\n    \"plan\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.breathehr.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8feec31d-b9d2-4f84-b998-420da09fae6f",
+    "name": "Breathe HR REST Absences Account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Breathe HR is a UK SMB HRIS. The REST API exposes employees, absences, holidays, sicknesses, and account resources as JSON over HTTP. Requests authenticate with an X-API-KEY header containing the per-account token generated under Configure > API Settings.\n\nContact Support:\n Name: Breathe HR Developer",
+      "type": "text/plain"
+    }
+  }
+}

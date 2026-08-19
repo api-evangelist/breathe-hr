@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Breathe HR REST Absences Sicknesses API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sicknesses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sickness records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/sicknesses",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "employee_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List sickness records"
+        },
+        {
+          "info": {
+            "name": "Create a sickness record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.breathehr.com/v1/sicknesses",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a sickness record"
+        },
+        {
+          "info": {
+            "name": "Get a sickness record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.breathehr.com/v1/sicknesses/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a sickness record"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

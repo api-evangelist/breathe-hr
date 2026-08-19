@@ -1,0 +1,246 @@
+{
+  "item": [
+    {
+      "id": "6194e467-e74b-4005-9132-41f9fb672e33",
+      "name": "Absences",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "910f6ed5-0de2-4fb5-9904-a28ffee21fb2",
+          "name": "List absences",
+          "request": {
+            "name": "List absences",
+            "description": {},
+            "url": {
+              "path": [
+                "absences"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "50"
+                },
+                {
+                  "disabled": false,
+                  "key": "employee_id",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e10de7fe-4097-40f3-b164-711dc6eeed43",
+              "name": "Absences",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "absences"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "50"
+                    },
+                    {
+                      "key": "employee_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 7978,\n    \"employee_id\": 5369,\n    \"kind\": \"other\",\n    \"start_date\": \"1965-03-01\",\n    \"end_date\": \"1971-07-11\",\n    \"status\": \"string\"\n  },\n  {\n    \"id\": 70,\n    \"employee_id\": 9726,\n    \"kind\": \"holiday\",\n    \"start_date\": \"2012-12-03\",\n    \"end_date\": \"1994-12-20\",\n    \"status\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b3b601b-c762-47eb-ac00-895c3bdd7605",
+          "name": "Get an absence",
+          "request": {
+            "name": "Get an absence",
+            "description": {},
+            "url": {
+              "path": [
+                "absences",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd24ac76-98d1-4b4d-93db-87b5823edf4d",
+              "name": "Absence",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "absences",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 8078,\n  \"employee_id\": 1475,\n  \"kind\": \"holiday\",\n  \"start_date\": \"1984-03-20\",\n  \"end_date\": \"2008-04-21\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.breathehr.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "58cf2220-b92c-4ed5-afb4-9a99ee10e1c5",
+    "name": "Breathe HR REST Absences API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Breathe HR is a UK SMB HRIS. The REST API exposes employees, absences, holidays, sicknesses, and account resources as JSON over HTTP. Requests authenticate with an X-API-KEY header containing the per-account token generated under Configure > API Settings.\n\nContact Support:\n Name: Breathe HR Developer",
+      "type": "text/plain"
+    }
+  }
+}
