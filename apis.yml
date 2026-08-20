@@ -52,6 +52,12 @@ apis:
   - Employees
   - Absences
   - Holidays
+  - Account
+  tags_raw:
+  - HR
+  - Employees
+  - Absences
+  - Holidays
   - Accounts
   properties:
   - type: Documentation
