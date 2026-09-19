@@ -38,6 +38,14 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/breathe-hr.png
 tags:
+  - Human Resources
+  - HRIS
+  - Employee Management
+  - Absence Management
+  - Holiday Tracking
+  - SMB
+  - United Kingdom
+tags_raw:
   - HR
   - HRIS
   - Human Resources
@@ -61,7 +69,7 @@ apis:
   humanURL: https://developer.breathehr.com/
   baseURL: https://api.breathehr.com/v1
   tags:
-  - HR
+  - Human Resources
   - Employees
   - Absences
   - Holidays
