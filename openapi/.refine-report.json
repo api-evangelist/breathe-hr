@@ -1,11 +1,7 @@
 {
   "provider": "breathe-hr",
   "sources": [
-    "breathe-hr-absences-api-openapi.yml",
-    "breathe-hr-account-api-openapi.yml",
-    "breathe-hr-employees-api-openapi.yml",
-    "breathe-hr-holidays-api-openapi.yml",
-    "breathe-hr-sicknesses-api-openapi.yml"
+    "_original/breathe-hr-openapi.yml"
   ],
   "outputs": [
     "breathe-hr-absences-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "breathe-hr-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "breathe-hr-absences-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "breathe-hr-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "breathe-hr-employees-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "breathe-hr-holidays-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "breathe-hr-sicknesses-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
