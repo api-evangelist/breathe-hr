@@ -103,6 +103,25 @@ paths:
                 $ref: '#/components/schemas/Holiday'
 components:
   schemas:
+    HolidayInput:
+      type: object
+      required:
+      - employee_id
+      - start_date
+      - end_date
+      properties:
+        employee_id:
+          type: integer
+        start_date:
+          type: string
+          format: date
+        end_date:
+          type: string
+          format: date
+        half_start:
+          type: boolean
+        half_end:
+          type: boolean
     Holiday:
       type: object
       properties:
@@ -129,25 +148,6 @@ components:
           - cancelled
         days:
           type: number
-    HolidayInput:
-      type: object
-      required:
-      - employee_id
-      - start_date
-      - end_date
-      properties:
-        employee_id:
-          type: integer
-        start_date:
-          type: string
-          format: date
-        end_date:
-          type: string
-          format: date
-        half_start:
-          type: boolean
-        half_end:
-          type: boolean
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
