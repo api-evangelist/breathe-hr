@@ -140,6 +140,9 @@ apis:
   - type: OpenAPI
     url: openapi/breathe-hr-sicknesses-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/breathe-hr-capability-edges.yml
+    name: Breathe HR Business Capability Map
   - type: AgenticAccess
     url: agentic-access/breathe-hr-agentic-access.yml
   - type: DomainSecurity
