@@ -85,11 +85,12 @@ paths:
                 $ref: '#/components/schemas/Sickness'
 components:
   schemas:
-    Sickness:
+    SicknessInput:
       type: object
+      required:
+      - employee_id
+      - start_date
       properties:
-        id:
-          type: integer
         employee_id:
           type: integer
         start_date:
@@ -100,12 +101,11 @@ components:
           format: date
         reason:
           type: string
-    SicknessInput:
+    Sickness:
       type: object
-      required:
-      - employee_id
-      - start_date
       properties:
+        id:
+          type: integer
         employee_id:
           type: integer
         start_date:

@@ -107,26 +107,6 @@ paths:
           description: Deleted
 components:
   schemas:
-    EmployeeInput:
-      type: object
-      required:
-      - first_name
-      - last_name
-      properties:
-        first_name:
-          type: string
-        last_name:
-          type: string
-        email:
-          type: string
-          format: email
-        job_title:
-          type: string
-        department:
-          type: string
-        start_date:
-          type: string
-          format: date
     Employee:
       type: object
       properties:
@@ -151,6 +131,26 @@ components:
           format: date
         status:
           type: string
+    EmployeeInput:
+      type: object
+      required:
+      - first_name
+      - last_name
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+          format: email
+        job_title:
+          type: string
+        department:
+          type: string
+        start_date:
+          type: string
+          format: date
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
