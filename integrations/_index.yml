@@ -53,5 +53,5 @@
     - connectors/applications/breathe-hr
     vendor_link: https://www.breathehr.com/en-gb/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
