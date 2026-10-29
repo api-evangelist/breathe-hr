@@ -1,4 +1,4 @@
-# Breathe HR (breathe-hr)
+# Breathe HR
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,107 @@
 
 Breathe is a UK-headquartered cloud HRIS designed for small and midsize businesses, covering employee records, holiday and sickness tracking, performance, documents, expenses, and rota scheduling. The Breathe API is a REST/JSON service that exposes employee, absence, account, and related HR resources for integration with payroll, identity, and analytics tools. Authentication uses a per-account API key passed in the X-API-KEY header against a production base URL of https://api.breathehr.com/v1 with a sandbox available at https://api.sandbox.breathehr.com/v1.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/breathe-hr/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/breathe-hr/refs/heads/main/apis.yml)
+**Areas:** Human Resources · HRIS · Employee Management · Absence Management · Holiday Tracking · Small Business · United Kingdom
 
-## Scope
+## Breathe HR on APIs.io
 
-- **Type:** Index
+Everything profiled for Breathe HR is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/breathe-hr/](https://apis.io/providers/breathe-hr/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- HR
-- HRIS
-- Human Resources
-- Employee Management
-- Absence Management
-- Holiday Tracking
-- SMB
-- UK
+- [Breathe HR REST API](https://apis.io/apis/breathe-hr/rest-api/) — JSON REST API for managing employees, absences, holidays, sick leaves, accounts, and related HR records inside Breathe. Calls require an X-API-KEY header…
+- [Breathe HR Absences API](https://apis.io/apis/breathe-hr/breathe-hr-absences-api/) — The Absences API from Breathe HR — 2 operation(s) for absences.
+- [Breathe HR Account API](https://apis.io/apis/breathe-hr/breathe-hr-account-api/) — The Account API from Breathe HR — 1 operation(s) for account.
+- [Breathe HR Employees API](https://apis.io/apis/breathe-hr/breathe-hr-employees-api/) — The Employees API from Breathe HR — 2 operation(s) for employees.
+- [Breathe HR Holidays API](https://apis.io/apis/breathe-hr/breathe-hr-holidays-api/) — The Holidays API from Breathe HR — 2 operation(s) for holidays.
+- [Breathe HR Sicknesses API](https://apis.io/apis/breathe-hr/breathe-hr-sicknesses-api/) — The Sicknesses API from Breathe HR — 2 operation(s) for sicknesses.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Breathe HR REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-JSON REST API for managing employees, absences, holidays, sick leaves, accounts, and related HR records inside Breathe. Calls require an X-API-KEY header containing the account-level token generated from the Breathe admin under Configure > API Settings.
+- [Breathe Hr Agentic Access](https://apis.io/agentic-access/breathe-hr/breathe-hr-agentic-access/)
 
-- **Human URL:** [https://developer.breathehr.com/](https://developer.breathehr.com/)
-- **Base URL:** `https://api.breathehr.com/v1`
+#### Collections (6)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- HR
-- Employees
-- Absences
-- Holidays
-- Accounts
+- [Breathe HR REST API](https://apis.io/collections/breathe-hr/open-breathe-hr/)
+- [Breathe HR REST Absences API](https://apis.io/collections/breathe-hr/open-breathe-hr-absences-api/)
+- [Breathe HR REST Absences Account API](https://apis.io/collections/breathe-hr/open-breathe-hr-account-api/)
+- [Breathe HR REST Absences Employees API](https://apis.io/collections/breathe-hr/open-breathe-hr-employees-api/)
+- [Breathe HR REST Absences Holidays API](https://apis.io/collections/breathe-hr/open-breathe-hr-holidays-api/)
+- [Breathe HR REST Absences Sicknesses API](https://apis.io/collections/breathe-hr/open-breathe-hr-sicknesses-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developer.breathehr.com/)
-- [Getting Started](https://developer.breathehr.com/documentation/getting_started)
-- [Authentication](https://developer.breathehr.com/documentation/authenticating)
-- [Sandbox  Base  U R L](https://api.sandbox.breathehr.com/v1)
-- [Postman Collection](collections/breathe-hr.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/breathe-hr.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Breathe Hr Authentication](https://apis.io/security/breathe-hr/breathe-hr-authentication/)
+- [Breathe Hr Domain Security](https://apis.io/security/breathe-hr/breathe-hr-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.breathehr.com)
-- [Developer  Portal](https://developer.breathehr.com)
 - [Documentation](https://developer.breathehr.com/)
 - [Pricing](https://www.breathehr.com/en-gb/pricing)
-- [Sign Up](https://www.breathehr.com/en-gb/free-trial)
-- [Knowledge  Base](https://intercom.help/breathehr/en)
-- [Support](mailto:support@breathehr.com)
-- [LinkedIn](https://www.linkedin.com/company/breathehr)
+- [Blog](https://www.breathehr.com/en-gb/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 48.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 13.2 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/breathe-hr/](https://apis.io/providers/breathe-hr/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Breathe HR: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/breathe-hr/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
